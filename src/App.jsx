@@ -1,14 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Board from './components/Board';
+import Header from './components/Header';
+import Player from './components/Player';
+import './style.css'
 
+// We want the Player component to be able to show us which player
+//  we can do that using props
+//  we pass props in when we render the component
+//  label what the props will be called and provide the value
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-     <h1>This is where all of my component will go</h1>
+      <Header />
+      <Player whichPlayer="X"/>
+      <Player whichPlayer="O"/>
+      <Board />
     </>
   )
 }
